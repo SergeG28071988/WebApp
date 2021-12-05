@@ -1,0 +1,17 @@
+{% extends 'mobile/base.html' %}
+
+{% block title %}
+Добавить тариф
+{% endblock  %}
+
+{% block content %}
+<h1>Добавить тариф</h1>
+<br>
+    <form method="post">
+          {% csrf_token %}
+          {{ form.name }} <br>
+          {{ form.description }}
+        <br>
+        <button type="submit" class="btn btn-success">Добавить</button>
+    </form>
+{% endblock  %}

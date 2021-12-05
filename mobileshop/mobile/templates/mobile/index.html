@@ -1,0 +1,20 @@
+{% extends 'mobile/base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock  %}
+
+{% block content %}
+<h1>Все тарифы</h1>
+<br>
+  {% if rates  %}
+    {% for el in rates  %}
+        <div class="alert alert-warning mt-2">
+          <h3>{{ el.name }}</h3>
+          <p>{{ el.description }}</p>
+        </div>
+    {% endfor %}
+  {% else %}
+      <p>У нас нет записей</p>
+  {% endif %}
+{% endblock  %}
